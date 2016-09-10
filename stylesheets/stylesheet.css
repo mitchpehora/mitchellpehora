@@ -7,7 +7,7 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  font-family: Helvetica; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -429,7 +429,7 @@ th {
 
 body {
   font-size: 15px;
-  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
   line-height: 1.5;
   background: #D1D1D1;
 }
