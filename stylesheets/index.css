@@ -1,0 +1,41 @@
+
+header {
+ color: white;
+ text-align: center;
+ margin: 0 auto;
+ background: url('https://github.com/mitchpehora/mitchellpehora/blob/master/images/Panoramic_view_of_Hamilton_Ontario.jpg?raw=true');
+ background-size: cover;
+ font-family: helvetica;
+ }
+a {
+  color: white;
+}
+h1 {text-align: center
+ font-family: helvetica;;
+}
+h2 { font-size: 20px;
+font}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+
+}
+
+ul {background: rgba(0,0,0,0.5);
+padding: 10px;
+}
+
+body {text-align: center;
+margin: 0;
+ background-color: rgba(0,1000,0,0.5);}
+
+@media (max-width: 500px) {
+h1 {font-size: 20px;}
+h2 {font-size: 10px;}
+}
+
+html {
+  font-family: Helvetica; /* 1 */
+
+}
