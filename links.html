@@ -2,22 +2,30 @@
 <!DOCTYPE html>
 <head>
 <link href="stylesheets/stylesheet.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="javascripts/script.js"></script>
 <style>
 header {
  color: white;
  text-align: center;
  margin: 0 auto;
- background: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Panoramic_view_of_Hamilton_Ontario.jpg');
+ background: url('https://github.com/mitchpehora/mitchellpehora/blob/master/images/Panoramic_view_of_Hamilton_Ontario.jpg?raw=true');
  background-size: cover;
-  
+ font-family: helvetica;
  }
+ div {
+ height: 200px;
+  background-size: cover;
+  position: relative;
+   margin: 0 auto 10px;
+  border-radius: 12px;
+  max-width: 550px
+}
 a {
   color: white;
 }
- 
-a:link {color: white;
- }
-h1 {text-align: center;
+h1 {text-align: center
+ font-family: helvetica;
 }
 h2 { font-size: 20px; 
 font}
@@ -25,43 +33,92 @@ li {
   display: inline;
   padding: 0px 10px 0px 10px;
   text-align: center;
+<<<<<<< HEAD
   style="text-decoration:none
 
+=======
+>>>>>>> master
 }
-
 ul {background: rgba(0,0,0,0.5);
 padding: 10px;
- color: white;
 }
-
 body {text-align: center;
 margin: 0;
-background-color: rgba(0,1000,0,0.5);
-;
-
-}
-
+ background-color: rgba(0,1000,0,0.5);}
 @media (max-width: 500px) {
 h1 {font-size: 20px;}
 h2 {font-size: 10px;}
 }
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+  .show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+ .pi{background-image: url("http://cdn1.alphr.com/sites/alphr/files/6/14/raspberry_pi_b_2_0_0.jpg");}
+  
+ .linkedin{background-image: url("http://measuremarketing.net/wp-content/uploads/2015/09/linkedin.jpg")}
+ 
+ .git{background-image: url("https://assets-cdn.github.com/images/modules/open_graph/github-mark.png")}
+
 </style>
 </head>
-
 <body>
 <header>
-<img src="http://i.imgur.com/b8b0jRb.png">
+<img src="https://github.com/mitchpehora/mitchellpehora/blob/master/images/me.png?raw=true">
 <ul>
-
-
 <li><a href="https://mitchpehora.github.io/mitchellpehora/" style="text-decoration:none">Home</a></li>
-
 </header>
 </ul>
-
-
 <h1>Links</h1>
+<<<<<<< HEAD
 <h2><a href="http://www.raspberrypi.org/" style="text-decoration:none"><font color="rgba(0,75,0,1)">Raspberry Pi Foundation</font></a> </h2>
 <p>The Raspberry Pi Foundation is an organization dedicated to the Raspberry Pi, a tiny Linux-based micro computer. Check out the TinyPi repo on my Githhub!
  </p>
+=======
+<div class='linkedin'>
+  <p>LinkedIn<br />
+  <small>Head over to my LinkedIn page for my work history, as well as my current resume and work status. <br /><a href="https://www.linkedin.com/in/mitchell-pehora-117b97bb">linkedin.com</a>
+ </small></p>
+</div>
+
+<div class='git'>
+  <p>Github <br />
+  <small>On my Github page, you can find the code I wrote for this website. You can also find information on my Raspberry Pi projects. <br /><a href="https://github.com/mitchpehora">github.com/mitchpehora</a>
+ </small></p>
+ </div>
+ <div class='pi'>
+  <p>Raspberry Pi Foundation <br />
+  <small>The Raspberry Pi Foundation is an organization dedicated to the Raspberry Pi, a tiny Linux-based micro computer. Check out the TinyPi repo on my Githhub. <br /><a href="https://www.raspberrypi.org">raspberrypi.org</a>
+ </small></p>
+ </div>
+ 
+ <script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+>>>>>>> master
 </body>
