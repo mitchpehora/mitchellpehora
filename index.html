@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <head>
 <link href="stylesheets/index.css" rel="stylesheet">
+<style>
+div.mobile{}
+div.desktop{}
+.mobile{display: none;}
+  @media (max-width: 500px) {
+    .desktop{display: none;}
+    .mobile{display: block;}
 
+      }
+</style>
 </head>
 
 <body>
-<header>
+
+
+<div class='desktop'>
+  <header>
 <img src="https://github.com/mitchpehora/mitchellpehora/blob/master/images/me.png?raw=true">
 <ul>
 
@@ -17,5 +29,20 @@
 
 
 <h1>Mitchell Pehora</h1>
-<h2>Bachelor of Technology student and avid tinkerer from Hamilton, Ontario.</h2>
+<h2>Bachelor of Technology student and avid tinkerer from Hamilton, Ontario.</h2></div>
+    <div class='mobile'>
+      <header>
+<ul>
+
+ <li><a href="https://mitchpehora.github.io/mitchellpehora/links" style="text-decoration:none">Links</a></li>
+ <li><a href="https://mitchpehora.github.io/mitchellpehora/archive" style="text-decoration:none">Archive</a></li>
+
+</header>
+</ul>
+
+
+<h1>Mitchell Pehora</h1>
+<h2>Bachelor of Technology student and avid tinkerer from Hamilton, Ontario.</h2></div>
+
+
 </body>
