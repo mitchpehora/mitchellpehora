@@ -1,59 +1,51 @@
 <!DOCTYPE html>
 <head>
-<link href="stylesheets/stylesheet.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="stylesheets/index.css" rel="stylesheet">
 <style>
-header {
- color: white;
- text-align: center;
- margin: 0 auto;
- background: url('https://github.com/mitchpehora/mitchellpehora/blob/master/images/Panoramic_view_of_Hamilton_Ontario.jpg?raw=true');
- background-size: cover;
- font-family: helvetica;
- }
-a {
-  color: white;
-}
-h1 {text-align: center
- font-family: helvetica;;
-}
-h2 { font-size: 20px; 
-font}
-li {
-  display: inline;
-  padding: 0px 10px 0px 10px;
-  text-align: center;
+div.mobile{}
+div.desktop{}
+.mobile{display: none;}
+  @media (max-width: 900px) {
+    .desktop{display: none;}
+    .mobile{display: block;}
+    img{max-width: 200px;}
+    h3{font-size: 10px;}
+    h2{font-size: 20px;}
+    h1{font-size: 30px;}
+      }
+  a{color: blue;}
 
-}
-
-ul {background: rgba(0,0,0,0.5);
-padding: 10px;
-}
-
-body {text-align: center;
-margin: 0;
- background-color: rgba(0,1000,0,0.5);}
-
-@media (max-width: 500px) {
-h1 {font-size: 20px;}
-h2 {font-size: 10px;}
-}
 </style>
 </head>
 
 <body>
-<header>
+
+
+<div class='desktop'>
+  <header>
 <img src="https://github.com/mitchpehora/mitchellpehora/blob/master/images/me.png?raw=true">
 <ul>
-<li><a href="https://github.com/mitchpehora" style="text-decoration:none">GitHub</a></li>
 
-<li><a href="https://www.linkedin.com/in/mitchell-pehora-117b97bb" style="text-decoration:none">LinkedIn</a></li>
- <li><a href="https://mitchpehora.github.io/mitchellpehora/links" style="text-decoration:none">Links</a></li>
- <li><a href="https://mitchpehora.github.io/mitchellpehora/archive" style="text-decoration:none">Archive</a></li>
+ <li><a href="https://mitchellpehora.me/links" style="text-decoration:none">Links</a></li>
+ <li><a href="https://mitchellpehora.me/archive" style="text-decoration:none">Archive</a></li>
 
 </header>
 </ul>
 
-
 <h1>Mitchell Pehora</h1>
 <h2>Bachelor of Technology student and avid tinkerer from Hamilton, Ontario.</h2>
+</div>
+    <div class='mobile'>
+      <h1>Mitchell Pehora</h1>
+      <h2>Bachelor of Technology student and avid tinkerer from Hamilton, Ontario.</h2>
+      <h3>My mobile site is under construction! Request the desktop site, or visit on your computer.</h3>
+
+      <li><a href="https://www.github.com/mitchpehora/" style="text-decoration:under">Github</a></li><br><br>
+      <li><a href="https://www.linkedin.com/in/mitchell-pehora-117b97bb" style="text-decoration:under">LinkedIn</a></li><br><br>
+</div>
+
+
 </body>
