@@ -5,7 +5,18 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-
+#pi
+{
+  cursor: pointer;
+}
+#linkedin
+{
+  cursor: pointer;
+}
+#git
+{
+  cursor: pointer;
+}
 html {
   font-family: Helvetica; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
