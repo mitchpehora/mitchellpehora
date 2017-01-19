@@ -6,6 +6,10 @@
  *    user zoom.
  */
 
+ a.helpHub {
+     cursor: pointer;
+ }
+
 html {
   font-family: Helvetica; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
