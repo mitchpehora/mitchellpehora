@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <head>
 <link href="stylesheets/stylesheet.css" rel="stylesheet">
@@ -121,3 +122,119 @@ small {
   });
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<head>
+<link href="stylesheets/stylesheet.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="javascripts/script.js"></script>
+<style>
+header {
+ color: white;
+ text-align: center;
+ margin: 0 auto;
+ background: url('https://github.com/mitchpehora/mitchellpehora/blob/master/images/Panoramic_view_of_Hamilton_Ontario.jpg?raw=true');
+ background-size: cover;
+ font-family: helvetica;
+ }
+ div {
+ height: 200px;
+  background-size: cover;
+  position: relative;
+   margin: 0 auto 10px;
+  border-radius: 12px;
+  max-width: 550px
+}
+a {
+  color: white;
+}
+h1 {text-align: center
+ font-family: helvetica;
+}
+h2 { font-size: 20px;
+font}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+}
+ul {background: rgba(0,0,0,0.5);
+padding: 10px;
+}
+body {text-align: center;
+margin: 0;
+ background-color: rgba(0,1000,0,0.5);}
+@media (max-width: 500px) {
+h1 {font-size: 20px;}
+h2 {font-size: 10px;}
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+  .show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+ .pi{background-image: url("https://raw.githubusercontent.com/mitchpehora/mitchellpehora/master/images/raspberry_pi_b_2_0_0.jpg");}
+
+ .linkedin{background-image: url("https://raw.githubusercontent.com/mitchpehora/mitchellpehora/master/images/linkedin.jpg")}
+
+ .git{background-image: url("https://raw.githubusercontent.com/mitchpehora/mitchellpehora/master/images/github-mark.png")}
+
+ .youTube{background-image: url("https://github.com/mitchpehora/mitchellpehora/blob/links/images/maxresdefault.jpg?raw=true")}
+</style>
+</head>
+<body>
+<header>
+<ul>
+<li><a href="https://mitchpehora.github.io/mitchellpehora/" style="text-decoration:none">Home</a></li>
+</header>
+</ul>
+<h1>Links</h1>
+<h2>Click an image to find out more and to visit my profile on that site!</h2>
+<div class='linkedin' style="cursor: pointer">
+  <p>LinkedIn<br />
+  <small>Head over to my LinkedIn page for my work history, as well as my current resume and work status. <br /><a href="https://www.linkedin.com/in/mitchell-pehora-117b97bb">linkedin.com</a>
+ </small></p>
+</div>
+
+<div class='git' style="cursor: pointer">
+  <p>Github <br />
+  <small>On my Github page, you can find the code I wrote for this website. You can also find information on my Raspberry Pi projects. <br /><a href="https://github.com/mitchpehora">github.com/mitchpehora</a>
+ </small></p>
+ </div>
+
+ <div class='youTube' style="cursor: pointer">
+  <p>Youtube <br />
+  <small>Using my tablet, I create math videos for my peers to learn from. I update weekly, subscribe if you're a Calculus fan.<br /><a href="https://www.youtube.com/channel/UC6OW650ZCm2uhfB6gBpgl5Q">youtube.com</a>
+ </small></p>
+ </div>
+
+ <script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+</body>
+>>>>>>> master
