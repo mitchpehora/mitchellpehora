@@ -2,18 +2,13 @@
 
 $(document).ready(function() {
     $('.contactMe').mouseenter(function() {
-        $('.contactMe').fadeTo('fast',0.5);
-    });
-    $('.contactMe').mouseleave(function() {
         $('.contactMe').fadeTo('fast',1);
     });
+    $('.contactMe').mouseleave(function() {
+        $('.contactMe').fadeTo('fast',0.75);
+    });
 
-    $('.dataSetOne').mouseenter(function() {
-    		$('.dataSetOne').fadeTo('fast',0.5);
-    });
-    $('.dataSetOne').mouseleave(function() {
-    		$('.dataSetOne').fadeTo('fast',1);
-    });
+
 
     button1 = document.getElementById('button1');
     button2 = document.getElementById('button2');
@@ -71,7 +66,8 @@ $(document).ready(function() {
 
 
 
-    canvas.width = 600;
+
+    canvas.height= 100;
     var set1=[0,0,0,0,0,0,0,];
 
     var ctx = document.getElementById('myChart').getContext('2d');

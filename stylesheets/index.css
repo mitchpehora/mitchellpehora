@@ -1,41 +1,70 @@
+body {
+  background-image: url("http://d3ao8sz5crj5i0.cloudfront.net/001_hubble-pillars-creation-2015.jpg");
+  background-size: 100%;
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+}
 
-header {
- color: white;
- text-align: center;
- margin: 0 auto;
- background: url('https://github.com/mitchpehora/mitchellpehora/blob/master/images/Panoramic_view_of_Hamilton_Ontario.jpg?raw=true');
- background-size: cover;
- font-family: helvetica;
- }
-a {
+
+.profiles{
+position: absolute;
+bottom: 0px;
+right: 0px;}
+
+.myName{
+  font-family: 'Oswald', sans-serif;
+  font-size: 120px;
+  font-weight:bold;
+
+  color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 4px;
+   -webkit-text-stroke-color: black;
+  text-align: center;
+vertical-align: middle;
+line-height: 90px;
+padding-top: 5%;
+}
+
+
+
+a:visited{
+  text-decoration: none;
   color: white;
 }
-h1 {text-align: center
- font-family: helvetica;;
+a {
+  text-decoration: none;
+  color: white;
 }
-h2 { font-size: 20px;
-font}
-li {
-  display: inline;
-  padding: 0px 10px 0px 10px;
+
+.contactMe
+{
+  height: 60px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #69D2E7;
   text-align: center;
-
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-align: center;
+  opacity: .75;
 }
 
-ul {background: rgba(0,0,0,0.5);
-padding: 10px;
-}
+.myDescription
+{
+  font-family: 'Oswald', sans-serif;;
+  font-size: 55px;
+  font-weight:bold;
 
-body {text-align: center;
-margin: 0;
- background-color: rgba(0,1000,0,0.5);}
+  color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: black;
 
-@media (max-width: 500px) {
-h1 {font-size: 20px;}
-h2 {font-size: 10px;}
-}
-
-html {
-  font-family: Helvetica; /* 1 */
-
+  text-align: center;
+vertical-align: middle;
+line-height: 90px;
+padding-top: 5px;
 }
