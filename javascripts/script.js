@@ -22,14 +22,17 @@ $(document).ready(function() {
 
     todayInfo= new Date();
 
-    /*dayToday=todayInfo.getDay()
-      xLabel=[dayToday,abs(dayToday-1)%7,abs(dayToday-2)%7,dayToday-3,dayToday-4,dayToday-5,abs(dayToday-6)%7]*/
-    dayToday=4;
-    xLabel=[4,3,2,1,0,6,5]
+    dayToday=todayInfo.getDay()
+    xLabel=[dayToday,dayToday-1,dayToday-2,dayToday-3,dayToday-4,dayToday-5,dayToday-6];
 
 
       for (i = 0; i < xLabel.length; i++)
     {
+    if(xLabel[i]<0)
+    {
+      xLabel[i]+=7;
+    }
+
     if (xLabel[i]==6)
     {
       xLabel[i]='Saturday';
