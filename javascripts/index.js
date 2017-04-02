@@ -5,4 +5,4 @@ $(document).ready(function() {
     $('.contactMe').mouseleave(function() {
         $('.contactMe').fadeTo('fast',0.75);
     });
-  }
+});
