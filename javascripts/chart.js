@@ -1,7 +1,12 @@
 
 
 $(document).ready(function() {
-
+  $('.contactMe').mouseenter(function() {
+      $('.contactMe').fadeTo('fast',1);
+  });
+  $('.contactMe').mouseleave(function() {
+      $('.contactMe').fadeTo('fast',0.75);
+  });
     button1 = document.getElementById('sensor1Button');
     button2 = document.getElementById('sensor2Button');
     reset = document.getElementById('resetButton');
