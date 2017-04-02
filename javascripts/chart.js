@@ -1,86 +1,123 @@
 
 
 $(document).ready(function() {
-    
-    button1 = document.getElementById('button1');
-    button2 = document.getElementById('button2');
-    reset = document.getElementById('reset');
+
+    button1 = document.getElementById('sensor1Button');
+    button2 = document.getElementById('sensor2Button');
+    reset = document.getElementById('resetButton');
     var canvas = document.getElementById("myChart"), ctx = canvas.getContext("2d");
 
+
     todayInfo= new Date();
-
+    yearToday=todayInfo.getFullYear()
     dayToday=todayInfo.getDay()
-    xLabel=[dayToday,dayToday-1,dayToday-2,dayToday-3,dayToday-4,dayToday-5,dayToday-6];
+    monthToday=todayInfo.getMonth()
+    dateToday=todayInfo.getDate();
+    lastMonth=monthToday-1
+    daysLastMonth=31
 
-
-      for (i = 0; i < xLabel.length; i++)
+    if (monthToday == 4 || monthToday == 6 || monthToday == 9 || monthToday == 12)
     {
-    if(xLabel[i]<0)
-    {
-      xLabel[i]+=7;
+      daysLastMonth = 30
     }
 
-    if (xLabel[i]==6)
+    if (monthToday==2)
     {
-      xLabel[i]='Saturday';
+      daysLastMonth=28
     }
 
-    if (xLabel[i]==5)
+    if (monthToday==2 && yearToday%4 ==0)
     {
-      xLabel[i]='Friday';
+      daysLastMonth=29
     }
 
-    if (xLabel[i]==4)
-    {
-      xLabel[i]='Thursday';
-    }
 
-    if (xLabel[i]==3)
-    {
-      xLabel[i]='Wednesday';
-    }
+    /*xDayWeek=[dayToday,dayToday-1,dayToday-2,dayToday-3,dayToday-4,dayToday-5,dayToday-6];*/
+    xDayWeek=[dayToday-6,dayToday-5,dayToday-4,dayToday-3,dayToday-2,dayToday-1,dayToday];
+    xDates=[dateToday-6,dateToday-5,dateToday-4,dateToday-3,dateToday-2,dateToday-1,dateToday]
+    xMonths=[monthToday,monthToday,monthToday,monthToday,monthToday,monthToday,monthToday]
+    xLabels=[]
 
-    if (xLabel[i]==2)
+      for (i = 0; i < xDayWeek.length; i++)
     {
-      xLabel[i]='Tuesday';
-    }
 
-    if (xLabel[i]==1)
-    {
-      xLabel[i]='Monday';
-    }
+    if(xDayWeek[i]<0)
+    { xDayWeek[i]+=7; }
 
-    if (xLabel[i]==0)
-    {
-      xLabel[i]='Sunday';
-    }
+    if(xDates[i]==0)
+    {xDates[i]=daysLastMonth; xMonths[i]=monthToday-1;}
+
+    if(xDates[i]==-1)
+    {xDates[i]=daysLastMonth-1; xMonths[i]=monthToday-1;}
+
+    if(xDates[i]==-2)
+    {xDates[i]=daysLastMonth-2; xMonths[i]=monthToday-1;}
+
+    if(xDates[i]==-3)
+    {xDates[i]=daysLastMonth-3; xMonths[i]=monthToday-1;}
+
+    if(xDates[i]==-4)
+    {xDates[i]=daysLastMonth-4; xMonths[i]=monthToday-1;}
+
+    if(xDates[i]==-5)
+    {xDates[i]=daysLastMonth-5; xMonths[i]=monthToday-1;}
+
+
+
+    if (xDayWeek[i]==6)
+    {xDayWeek[i]='Saturday';}
+
+    if (xDayWeek[i]==5)
+    {xDayWeek[i]='Friday ';}
+
+    if (xDayWeek[i]==4)
+    {xDayWeek[i]='Thursday';}
+
+    if (xDayWeek[i]==3)
+    {xDayWeek[i]='Wednesday';}
+
+    if (xDayWeek[i]==2)
+    {xDayWeek[i]='Tuesday';}
+
+    if (xDayWeek[i]==1)
+    {xDayWeek[i]='Monday';}
+
+    if (xDayWeek[i]==0)
+    {xDayWeek[i]='Sunday';}
+
+    xLabels[i]=xDayWeek[i]+' ('+(xMonths[i]+1)+' - '+xDates[i]+')';
 }
 
 
 
 
-    canvas.height= 100;
-    var set1=[0,0,0,0,0,0,0,];
+
+    var blank=[0,0,0,0,0,0,0,];
+    var set1=[1,2,3,4,5,6,7];
+    var set2=[1,1,1,1,1,1,1,];
 
     var ctx = document.getElementById('myChart').getContext('2d');
+
+
     var myChart = new Chart(ctx, {
+      responsive: false,
       type: 'line',
       data: {
-        labels: xLabel,
+        labels: xLabels,
         datasets: [{
           label: 'Temperature',
-          data: set1,
+          data: blank,
           backgroundColor: "rgba(153,255,51,0.4)"
         }]
       }
     });
 
     button1.onclick = function() {
-          var set1=[1,2,3,4,5,6,7];
+
     			myChart = new Chart(ctx, {
     			  type: 'line',
     			  data: {
-    			    labels: xLabel,
+    			    labels: xLabels,
     			    datasets: [{
     			      label: 'Temperature',
     			      data: set1,
@@ -92,14 +129,14 @@ $(document).ready(function() {
 
 
 button2.onclick = function() {
-                var set1=[1,1,1,1,1,1,1,];
+
           			myChart = new Chart(ctx, {
           			  type: 'line',
           			  data: {
-          			    labels: xLabel,
+          			    labels: xLabels,
           			    datasets: [{
           			      label: 'Temperature',
-          			      data: set1,
+          			      data: set2,
           			      backgroundColor: "rgba(153,255,51,0.4)"
           			    }]
           			  }
@@ -111,10 +148,10 @@ button2.onclick = function() {
                     			myChart = new Chart(ctx, {
                     			  type: 'line',
                     			  data: {
-                    			    labels: xLabel,
+                    			    labels: xLabels,
                     			    datasets: [{
                     			      label: 'Temperature',
-                    			      data: set1,
+                    			      data: blank,
                     			      backgroundColor: "rgba(153,255,51,0.4)"
                     			    }]
                     			  }

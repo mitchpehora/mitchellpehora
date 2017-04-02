@@ -1,18 +1,8 @@
 <html>
 <style>
 
-h1 {
-	text-align: center;
 
-}
 
-.Buttons
-{
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-
-}
 
 
 
@@ -26,7 +16,6 @@ h1 {
 	          src="https://code.jquery.com/jquery-3.2.1.js"
 	          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	          crossorigin="anonymous"></script>
-						<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 
 	  <script type='text/javascript' src='javascripts/chart.js'></script>
 
@@ -35,12 +24,18 @@ h1 {
 <body>
 	<h1>Sensor Data</h1>
 	<br>
-<canvas id="myChart"></canvas>
-<div id='Buttons'>
-<input type="button" name="button1" value="Sensor 1" id='button1' />
-<input type="button" name="button2" value="Sensor 2" id='button2' />
-<input type="button" name="reset" value="Reset" id='reset' />
-<div>
+
+<div class=chartWrapper>
+<canvas id="myChart" width="200" height="100"></canvas>
+</div>
+
+
+
+<div class='buttons'>
+<input type="button" class="sensorButton" value="Sensor 1" id=sensor1Button>
+<input type="button" class="sensorButton" value="Sensor 2" id=sensor2Button>
+<input type="button" class="resetButton" value="Reset" id=resetButton>
+</div>
 
 
 </body>
