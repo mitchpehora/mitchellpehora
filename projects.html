@@ -1,6 +1,23 @@
 <html>
 
 <style>
+
+.contactMe
+{
+  height: 60px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: green;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  opacity: .75;
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 120px;
@@ -28,15 +45,37 @@ h2{
 a {
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
+}
+a:visited
+{
 
 }
-
 p
 {
 font-size: 15px;
+font-family: 'Oswald', sans-serif;
+text-decoration: none;
+padding-top: 5px;
+}
+
+p:visited
+{
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  padding-top: 5px;
+  color: white;
+
+
 }
 </style>
+
 <head>
+  <script
+          src="https://code.jquery.com/jquery-3.2.1.js"
+          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+          crossorigin="anonymous"></script>
+  <script type='text/javascript' src='javascripts/index.js'></script>
 
 </head>
 
@@ -48,6 +87,10 @@ font-size: 15px;
 <a>An experiment in creating dynamic x-axis labelling for Chart.js<a>
 <p>Last Updated: April 2nd 2017</p>
 </div>
+
+<div class='contactMe'>
+<a href='https://mitchpehora.github.io/mitchellpehora/index'><p>Home</p>
+</a></div>
 <body>
 
 
