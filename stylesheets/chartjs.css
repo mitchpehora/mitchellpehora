@@ -26,6 +26,17 @@ h1
     font-size: 16px;
 }
 
+.timeButton {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 .buttons
 {
 	position: absolute;
@@ -37,4 +48,37 @@ h1
 margin: auto;
 width: 75%;
 
+}
+.home
+{
+  height: 60px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: green;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-align: center;
+  opacity: .75;
+}
+a:visited{
+  text-decoration: none;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+
+
+}
+
+p{
+  font-size: 20px;
 }

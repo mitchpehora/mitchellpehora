@@ -1,38 +1,6 @@
 <html>
 <style>
-.contactMe
-{
-  height: 60px;
-  width: 100px;
-  border-radius: 5px;
-  background-color: green;
-  text-align: center;
-  color: #FFFFFF;
-  font-family: 'Oswald', sans-serif;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  text-align: center;
-  opacity: .75;
-}
-a:visited{
-  text-decoration: none;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 25px;
-}
-a {
-  text-decoration: none;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 25px;
 
-
-}
-
-p{
-  font-size: 20px;
-}
 
 
 
@@ -41,14 +9,15 @@ p{
 </style>
 
 	<head>
-
+    <title>chartjs</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="stylesheets/chartjs.css">
 		<script
 	          src="https://code.jquery.com/jquery-3.2.1.js"
 	          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	          crossorigin="anonymous"></script>
-
+<script type="text/javascript" src='http://rawgit.com/mitchpehora/lastWeek/master/javascripts/lastWeek.js' /></script>
+<script type="text/javascript" src='http://rawgit.com/mitchpehora/lastWeek/master/javascripts/lastMonth.js' /></script>
 	  <script type='text/javascript' src='javascripts/chart.js'></script>
 
 </head>
@@ -66,10 +35,11 @@ p{
 <div class='buttons'>
 <input type="button" class="sensorButton" value="Sensor 1" id=sensor1Button>
 <input type="button" class="sensorButton" value="Sensor 2" id=sensor2Button>
+<input type="button" class="timeButton" value="Past Month" id=pastMonth>
 <input type="button" class="resetButton" value="Reset" id=resetButton>
 </div>
 
-<div class='contactMe'>
+<div class='home'>
 <a href='https://mitchpehora.github.io/mitchellpehora/index'><p>Home</p>
 </a></div>
 
