@@ -10,40 +10,57 @@ $(document).ready(function() {
     button1 = document.getElementById('sensor1Button');
     button2 = document.getElementById('sensor2Button');
     reset = document.getElementById('resetButton');
-    month = document.getElementById('pastMonth');
+    xLabels=lastMonth();
+
+
+    var numberDays = document.getElementById("numberDays");
     var canvas = document.getElementById("myChart"), ctx = canvas.getContext("2d");
-    var xMonthLabels=lastMonth()
+
 
     var blank=[0,0,0,0,0,0,0,];
     var set1=[1,2,3,4,5,6,7];
     var set2=[1,1,1,1,1,1,1,];
-    var monthSet=[1,2,3,4,25,36,44,53,64,51,42,33,24,15,16,17,18,19,20,21,22,23,23,25,26,27,28,29,30];
+    var monthSet1=[1,2,3,4,25,36,44,53,64,51,42,33,24,15,16,17,18,19,20,21,22,23,23,25,26,27,28,29,30,12,5,32,45,33,25];
+    var monthSet2=[12,5,16,90,30,20,54,67,24,48,73,73,23,63,19,64,36,83,73,45,94,23,56,34,56,23,45,67,45,34,22,7,10,8,25];
 
     var ctx = document.getElementById('myChart').getContext('2d');
-
+    customSet=[];
+    customxLabels=[];
 
     var myChart = new Chart(ctx, {
       responsive: false,
       type: 'line',
       data: {
-        labels: lastWeek(),
+        labels: [0],
         datasets: [{
           label: 'Temperature',
-          data: blank,
+          data: [0],
           backgroundColor: "rgba(153,255,51,0.4)"
         }]
       }
     });
 
-    button1.onclick = function() {
 
+
+    button1.onclick = function() {
+      var daysSelected = numberDays.value;
+      customSet=[];
+      customxLabels=[];
+
+      for (var i=0;i<daysSelected;i++)
+      {
+        customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
+        customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+        console.log(customxLabels[daysSelected-1-i])
+
+      }
     			myChart = new Chart(ctx, {
     			  type: 'line',
     			  data: {
-    			    labels: lastWeek(),
+    			    labels: customxLabels,
     			    datasets: [{
     			      label: 'Temperature',
-    			      data: set1,
+    			      data: customSet,
     			      backgroundColor: "rgba(153,255,51,0.4)"
     			    }]
     			  }
@@ -53,49 +70,48 @@ $(document).ready(function() {
 
 
 
+
 button2.onclick = function() {
+          var daysSelected = numberDays.value;
+          customSet=[];
+          customxLabels=[];
 
-          			myChart = new Chart(ctx, {
-          			  type: 'line',
-          			  data: {
-          			    labels: lastWeek(),
-          			    datasets: [{
-          			      label: 'Temperature',
-          			      data: set2,
-          			      backgroundColor: "rgba(153,255,51,0.4)"
-          			    }]
-          			  }
-          			});
+          for (var i=0;i<daysSelected;i++)
+          {
+            customSet[daysSelected-1-i]=monthSet2[monthSet1.length-1-i];
+            customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+            console.log(customxLabels[daysSelected-1-i])
+
           }
+              myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: customxLabels,
+                  datasets: [{
+                    label: 'Temperature',
+                    data: customSet,
+                    backgroundColor: "rgba(153,255,51,0.4)"
+                  }]
+                }
+              });
+            }
 
-          month.onclick = function() {
+
+reset.onclick = function() {
 
                     			myChart = new Chart(ctx, {
                     			  type: 'line',
                     			  data: {
-                    			    labels: xMonthLabels,
+                    			    labels: [0],
                     			    datasets: [{
                     			      label: 'Temperature',
-                    			      data: monthSet,
+                    			      data: [0],
                     			      backgroundColor: "rgba(153,255,51,0.4)"
                     			    }]
                     			  }
                     			});
                     }
 
-          reset.onclick = function() {
-                          var set1=[0,0,0,0,0,0,0];
-                    			myChart = new Chart(ctx, {
-                    			  type: 'line',
-                    			  data: {
-                    			    labels: lastWeek(),
-                    			    datasets: [{
-                    			      label: 'Temperature',
-                    			      data: blank,
-                    			      backgroundColor: "rgba(153,255,51,0.4)"
-                    			    }]
-                    			  }
-                    			});
-                    }
+
 
 });

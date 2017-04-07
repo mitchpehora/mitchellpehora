@@ -40,8 +40,14 @@ h1
 .buttons
 {
 	position: absolute;
-	right: 50px;
+	left: 50px;
 
+}
+
+.daySelectMenu
+{
+  position: absolute;
+	right: 50px;
 }
 
 .chartWrapper {
@@ -51,18 +57,19 @@ width: 75%;
 }
 .home
 {
-  height: 60px;
-  width: 100px;
+
   border-radius: 5px;
+  padding: 0px 10px 0px 10px;
   background-color: green;
-  text-align: center;
+
   color: #FFFFFF;
   font-family: 'Oswald', sans-serif;
   position: absolute;
-  bottom: 10px;
+  top: 600px;
   left: 10px;
-  text-align: center;
+
   opacity: .75;
+  margin: 10px;
 }
 a:visited{
   text-decoration: none;
@@ -78,7 +85,9 @@ a {
 
 
 }
-
+h4{
+  font-family: 'Oswald', sans-serif;
+}
 p{
   font-size: 20px;
 }
