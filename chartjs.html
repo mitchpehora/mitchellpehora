@@ -10,14 +10,15 @@
 
 	<head>
     <title>chartjs</title>
+		<script type="text/javascript" src='http://rawgit.com/mitchpehora/lastWeek/master/javascripts/lastWeek.js' /></script>
+		<script type="text/javascript" src='http://rawgit.com/mitchpehora/lastWeek/master/javascripts/lastMonth.js' /></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="stylesheets/chartjs.css">
 		<script
 	          src="https://code.jquery.com/jquery-3.2.1.js"
 	          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	          crossorigin="anonymous"></script>
-<script type="text/javascript" src='http://rawgit.com/mitchpehora/lastWeek/master/javascripts/lastWeek.js' /></script>
-<script type="text/javascript" src='http://rawgit.com/mitchpehora/lastWeek/master/javascripts/lastMonth.js' /></script>
+
 <script type='text/javascript' src='javascripts/drawChart.js'></script>
 	  <script type='text/javascript' src='javascripts/chart.js'></script>
 
@@ -34,8 +35,10 @@
 
 
 <div class='buttons'>
-<input type="button" class="sensorButton" value="Sensor 1" id=sensor1Button>
-<input type="button" class="sensorButton" value="Sensor 2" id=sensor2Button>
+	<select id='sensor'>
+		<option value="set1">Sensor 1</option>
+		<option value="set2"> Sensor 2</option>
+	</select>
 <input type="button" class="resetButton" value="Reset" id=resetButton>
 </div>
 

@@ -7,8 +7,7 @@ $(document).ready(function() {
   $('.home').mouseleave(function() {
       $('.home').fadeTo('fast',0.75);
   });
-    button1 = document.getElementById('sensor1Button');
-    button2 = document.getElementById('sensor2Button');
+
     reset = document.getElementById('resetButton');
 
 
@@ -17,6 +16,7 @@ $(document).ready(function() {
 
     var numberDays = document.getElementById("numberDays");
     var canvas = document.getElementById("myChart"), ctx = canvas.getContext("2d");
+    var radio = document.getElementById("sensor");
 
 
     var blank=[0,0,0,0,0,0,0,];
@@ -29,42 +29,76 @@ $(document).ready(function() {
     customSet=[];
     customxLabels=[];
 
-    var myChart = new Chart(ctx, {
-      responsive: false,
-      type: 'line',
-      data: {
-        labels: [0],
-        datasets: [{
-          label: 'Temperature',
-          data: [0],
-          backgroundColor: "rgba(153,255,51,0.4)"
-        }]
-      }
-    });
+    regularChart([1,2,3,4,5],[0,0,0,0,0],ctx,'Temperature');
+
+radio.onchange = function() {
+  var radioSelected=radio.value;
+
+  if (radioSelected=='set1')
+  {
+    thresholdCheck=document.getElementById("myCheck").checked
+    var daysSelected = numberDays.value;
+    customSet=[];
+    customxLabels=[];
 
 
+    for (var i=0;i<daysSelected;i++)
+    {
+      customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
+      customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+    }
 
-    button1.onclick = function() {
-      thresholdCheck=document.getElementById("myCheck").checked
-      var daysSelected = numberDays.value;
-      customSet=[];
-      customxLabels=[];
+    if(thresholdCheck==true)
+        {thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+
+    if(thresholdCheck==false)
+            {regularChart(customxLabels,customSet,ctx,'Temperature')}
+  }
+
+  if (radioSelected=='set2')
+  {
+    thresholdCheck=document.getElementById("myCheck").checked
+    var daysSelected = numberDays.value;
+    customSet=[];
+    customxLabels=[];
 
 
-      for (var i=0;i<daysSelected;i++)
-      {
-        customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
-        customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
-      }
+    for (var i=0;i<daysSelected;i++)
+    {
+      customSet[daysSelected-1-i]=monthSet2[monthSet2.length-1-i];
+      customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+    }
 
-      if(thresholdCheck==true)
-    			{thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+    if(thresholdCheck==true)
+        {thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
 
-      if(thresholdCheck==false)
-        			{regularChart(customxLabels,customSet,ctx,'Temperature')}
+    if(thresholdCheck==false)
+            {regularChart(customxLabels,customSet,ctx,'Temperature')}
+  }
+}
+
+numberDays.onchange = function() {
+  thresholdCheck=document.getElementById("myCheck").checked
+  var daysSelected = numberDays.value;
+  customSet=[];
+  customxLabels=[];
 
 
-        }
+  for (var i=0;i<daysSelected;i++)
+  {
+    customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
+    customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+  }
+
+  if(thresholdCheck==true)
+      {thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+
+  if(thresholdCheck==false)
+          {regularChart(customxLabels,customSet,ctx,'Temperature')}
+
+}
+
+
 
 
 
