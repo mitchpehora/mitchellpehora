@@ -10,6 +10,8 @@ $(document).ready(function() {
     button1 = document.getElementById('sensor1Button');
     button2 = document.getElementById('sensor2Button');
     reset = document.getElementById('resetButton');
+
+
     xLabels=lastMonth();
 
 
@@ -43,35 +45,25 @@ $(document).ready(function() {
 
 
     button1.onclick = function() {
+      thresholdCheck=document.getElementById("myCheck").checked
       var daysSelected = numberDays.value;
       customSet=[];
       customxLabels=[];
-      warningData=[];
+
 
       for (var i=0;i<daysSelected;i++)
       {
         customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
         customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
-        warningData[i]=30;
-
-        console.log(customxLabels[daysSelected-1-i])
-
       }
-    			myChart = new Chart(ctx, {
-    			  type: 'line',
-    			  data: {
-    			    labels: customxLabels,
-    			    datasets: [{
-    			      label: 'Temperature',
-    			      data: customSet,
-    			      backgroundColor: "rgba(153,255,51,0.4)"
-    			    },{label: 'Heat Warning',
-              data: warningData,
-              backgroundColor: "rgba(153,0,0,1)",
-            fill: false,
-          borderColor: "rgba(153,0,0,1)"}]
-    			  }
-    			});
+
+      if(thresholdCheck==true)
+    			{thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+
+      if(thresholdCheck==false)
+        			{regularChart(customxLabels,customSet,ctx,'Temperature')}
+
+
         }
 
 
@@ -79,6 +71,7 @@ $(document).ready(function() {
 
 
 button2.onclick = function() {
+          thresholdCheck=document.getElementById("myCheck").checked
           var daysSelected = numberDays.value;
           customSet=[];
           customxLabels=[];
@@ -91,38 +84,17 @@ button2.onclick = function() {
             warningData[i]=30;
 
           }
-              myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                  labels: customxLabels,
-                  datasets: [{
-                    label: 'Temperature',
-                    data: customSet,
-                    backgroundColor: "rgba(153,255,51,0.4)"
-                  },{label: 'Heat Warning',
-                  data: warningData,
-                  backgroundColor: "rgba(153,0,0,1)",
-                fill: false,
-              borderColor: "rgba(153,0,0,1)"}]
+          if(thresholdCheck==true)
+              {thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+
+          if(thresholdCheck==false)
+                  {regularChart(customxLabels,customSet,ctx,'Temperature')}
                 }
-              });
-            }
 
 
 reset.onclick = function() {
-
-                    			myChart = new Chart(ctx, {
-                    			  type: 'line',
-                    			  data: {
-                    			    labels: [0],
-                    			    datasets: [{
-                    			      label: 'Temperature',
-                    			      data: [0],
-                    			      backgroundColor: "rgba(153,255,51,0.4)"
-                    			    }]
-                    			  }
-                    			});
-                    }
+  regularChart([0],[0],ctx,'Temperature');
+}
 
 
 

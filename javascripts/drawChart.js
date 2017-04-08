@@ -1,4 +1,4 @@
-function ThresholdChart(xlabels,yData,threshold,canvas,dataLabel)
+function thresholdChart(xlabels,yData,threshold,canvas,dataLabel)
 {
   warningData=[];
   for (var i =0;i<xlabels.length;i++)
@@ -18,6 +18,21 @@ function ThresholdChart(xlabels,yData,threshold,canvas,dataLabel)
       backgroundColor: "rgba(153,0,0,1)",
     fill: false,
   borderColor: "rgba(153,0,0,1)"}]
+    }
+  })
+}
+
+function regularChart(xlabels,yData,canvas,dataLabel)
+{
+  myChart = new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: xlabels,
+      datasets: [{
+        label: dataLabel,
+        data: yData,
+        backgroundColor: "rgba(153,255,51,0.4)"
+      }]
     }
   })
 }
