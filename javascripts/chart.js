@@ -46,11 +46,14 @@ $(document).ready(function() {
       var daysSelected = numberDays.value;
       customSet=[];
       customxLabels=[];
+      warningData=[];
 
       for (var i=0;i<daysSelected;i++)
       {
         customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
         customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+        warningData[i]=30;
+
         console.log(customxLabels[daysSelected-1-i])
 
       }
@@ -62,7 +65,11 @@ $(document).ready(function() {
     			      label: 'Temperature',
     			      data: customSet,
     			      backgroundColor: "rgba(153,255,51,0.4)"
-    			    }]
+    			    },{label: 'Heat Warning',
+              data: warningData,
+              backgroundColor: "rgba(153,0,0,1)",
+            fill: false,
+          borderColor: "rgba(153,0,0,1)"}]
     			  }
     			});
         }
@@ -75,12 +82,13 @@ button2.onclick = function() {
           var daysSelected = numberDays.value;
           customSet=[];
           customxLabels=[];
+          warningData=[]
 
           for (var i=0;i<daysSelected;i++)
           {
             customSet[daysSelected-1-i]=monthSet2[monthSet1.length-1-i];
             customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
-            console.log(customxLabels[daysSelected-1-i])
+            warningData[i]=30;
 
           }
               myChart = new Chart(ctx, {
@@ -91,7 +99,11 @@ button2.onclick = function() {
                     label: 'Temperature',
                     data: customSet,
                     backgroundColor: "rgba(153,255,51,0.4)"
-                  }]
+                  },{label: 'Heat Warning',
+                  data: warningData,
+                  backgroundColor: "rgba(153,0,0,1)",
+                fill: false,
+              borderColor: "rgba(153,0,0,1)"}]
                 }
               });
             }
