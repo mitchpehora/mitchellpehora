@@ -17,6 +17,7 @@ $(document).ready(function() {
     var numberDays = document.getElementById("numberDays");
     var canvas = document.getElementById("myChart"), ctx = canvas.getContext("2d");
     var radio = document.getElementById("sensor");
+    var thresholdCheck=document.getElementById("myCheck");
 
 
     var blank=[0,0,0,0,0,0,0,];
@@ -99,23 +100,49 @@ radio.onchange = function() {
 }
 
 numberDays.onchange = function() {
-  thresholdCheck=document.getElementById("myCheck").checked
-  var daysSelected = numberDays.value;
-  customSet=[];
-  customxLabels=[];
+  var radioSelected=radio.value;
 
-
-  for (var i=0;i<daysSelected;i++)
+  if (radioSelected=='set1')
   {
-    customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
-    customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+    thresholdCheck=document.getElementById("myCheck").checked
+    var daysSelected = numberDays.value;
+    customSet=[];
+    customxLabels=[];
+
+
+    for (var i=0;i<daysSelected;i++)
+    {
+      customSet[daysSelected-1-i]=monthSet1[monthSet1.length-1-i];
+      customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+    }
+
+    if(thresholdCheck==true)
+        {thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+
+    if(thresholdCheck==false)
+            {regularChart(customxLabels,customSet,ctx,'Temperature')}
   }
 
-  if(thresholdCheck==true)
-      {thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+  if (radioSelected=='set2')
+  {
+    thresholdCheck=document.getElementById("myCheck").checked
+    var daysSelected = numberDays.value;
+    customSet=[];
+    customxLabels=[];
 
-  if(thresholdCheck==false)
-          {regularChart(customxLabels,customSet,ctx,'Temperature')}
+
+    for (var i=0;i<daysSelected;i++)
+    {
+      customSet[daysSelected-1-i]=monthSet2[monthSet2.length-1-i];
+      customxLabels[daysSelected-1-i]=xLabels[xLabels.length-1-i]
+    }
+
+    if(thresholdCheck==true)
+        {thresholdChart(customxLabels,customSet,10,ctx,'Temperature')};
+
+    if(thresholdCheck==false)
+            {regularChart(customxLabels,customSet,ctx,'Temperature')}
+  }
 
 }
 
