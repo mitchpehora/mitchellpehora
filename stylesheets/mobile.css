@@ -1,0 +1,73 @@
+.links
+{
+  font-family: 'Oswald', sans-serif;
+  height: 75px;
+  width: 600px;
+  border-radius: 5px;
+  background-color: #2525CA;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+
+
+  position: absolute;
+  top: -300;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+
+  margin: auto;
+
+}
+
+.contactMe
+{
+  font-family: 'Oswald', sans-serif;
+  height: 75px;
+  width:600px;
+  border-radius: 5px;
+  background-color: #6C0E6C;
+  text-align: center;
+  color: #FFFFFF;
+
+  position: absolute;
+  top: -100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+
+  margin: auto;
+
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+
+font-size: 50px;
+text-align: center;
+vertical-align: middle;
+
+
+}
+
+.myName
+{
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  font-weight:bold;
+
+  color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+
+  padding: none;
+  position: absolute;
+  bottom: 10;
+  left: 10;
+
+}
