@@ -1,7 +1,29 @@
 
 body {
-  background-image: url("https://github.com/mitchpehora/mitchellpehora/blob/master/images/mobilebg.png?raw=true");
+  background-image: url("https://raw.githubusercontent.com/mitchpehora/mitchellpehora/c741b80df40eb57bcc72c3533d889056479c93ce/images/mobilebg.png");
   background-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+font-size: 50px;
+text-align: center;
+vertical-align: middle;
+
+
+}
+
+p {
+  text-decoration: none;
+  color: white;
+
+font-size: 50px;
+text-align: center;
+vertical-align: middle;
+
+
 }
 
 .links
@@ -10,7 +32,7 @@ body {
   height: 75px;
   width: 600px;
   border-radius: 5px;
-  background-color: #2525CA;
+  background-color: rgba(127, 63, 191, 0.75);
   color: #FFFFFF;
   text-align: center;
   vertical-align: middle;
@@ -27,13 +49,14 @@ body {
 
 }
 
+
 .contactMe
 {
   font-family: 'Oswald', sans-serif;
   height: 75px;
   width:600px;
   border-radius: 5px;
-  background-color: #6C0E6C;
+  background-color: rgba(67, 63, 191, 0.75);
   text-align: center;
   color: #FFFFFF;
 
@@ -44,21 +67,14 @@ body {
   right: 0;
 
 
+
+
   margin: auto;
 
 }
 
 
-a {
-  text-decoration: none;
-  color: white;
 
-font-size: 50px;
-text-align: center;
-vertical-align: middle;
-
-
-}
 
 .myName
 {
