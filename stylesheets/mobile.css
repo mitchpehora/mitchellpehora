@@ -81,6 +81,7 @@ vertical-align: middle;
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-weight:bold;
+  font-color: white;
 
 /*
    -webkit-text-fill-color: white; // Will override color (regardless of order)
