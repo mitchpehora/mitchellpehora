@@ -82,11 +82,12 @@ vertical-align: middle;
   font-size: 75px;
   font-weight:bold;
 
-  color: black;
-   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+/*
+   -webkit-text-fill-color: white; // Will override color (regardless of order)
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: black;
 
+*/
   padding: none;
   position: absolute;
   bottom: 10;
