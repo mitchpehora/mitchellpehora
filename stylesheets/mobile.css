@@ -9,7 +9,7 @@ a {
   text-decoration: none;
   color: white;
 
-font-size: 50px;
+font-size: 100px;
 
 
 
@@ -29,7 +29,7 @@ font-size: 50px;
 .links
 {
   font-family: 'Oswald', sans-serif;
-  height: 200px;
+  height: 250px;
   width: 600px;
   border-radius: 5px;
   background-color: rgba(147, 235, 60, 0.75);
@@ -57,7 +57,7 @@ font-size: 50px;
 .contactMe
 {
   font-family: 'Oswald', sans-serif;
-  height: 200px;
+  height: 250px;
   width:600px;
   border-radius: 5px;
   background-color: rgba(67, 63, 191, 0.75);
