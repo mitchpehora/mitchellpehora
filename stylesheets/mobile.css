@@ -8,8 +8,8 @@ body {
 a {
   text-decoration: none;
   color: white;
-
 font-size: 100px;
+font-family: 'Oswald', sans-serif;
 
 
 
@@ -25,6 +25,26 @@ font-size: 50px;
 
 
 }
+
+.linkstable
+{
+  text-align: center;
+  vertical-align: middle;
+  
+
+  position: relative;
+  top: 20vh;
+  bottom: 0;
+  left: 25vw;
+  right: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 50vw;
+}
+
+table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+  }
 
 .links
 {
