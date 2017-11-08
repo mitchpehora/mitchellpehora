@@ -30,7 +30,7 @@ font-size: 50px;
 {
   text-align: center;
   vertical-align: middle;
-  
+
 
   position: relative;
   top: 20vh;
@@ -49,8 +49,8 @@ table {
 .links
 {
   font-family: 'Oswald', sans-serif;
-  height: 250px;
-  width: 600px;
+  height: 20vh;
+  width: 50vw;
   border-radius: 5px;
   background-color: rgba(147, 235, 60, 0.75);
   color: #FFFFFF;
@@ -59,7 +59,7 @@ table {
 
 
   position: relative;
-  top: 150;
+  top: 10vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -77,15 +77,15 @@ table {
 .contactMe
 {
   font-family: 'Oswald', sans-serif;
-  height: 250px;
-  width:600px;
+  height: 20vh;
+  width: 50vw;
   border-radius: 5px;
   background-color: rgba(67, 63, 191, 0.75);
 
   color: #FFFFFF;
 
   position: relative;
-  top: 350;
+  top: 20vh;
   bottom: 0;
   left: 0;
   right: 0;
